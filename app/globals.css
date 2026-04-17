@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-brand-cream text-text-primary font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold tracking-tight;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-brand-green text-white;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .card {
+    @apply bg-white rounded-card shadow-card border border-surface-border
+           transition-shadow duration-300 hover:shadow-card-hover;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-brand-green text-white font-body font-semibold
+           rounded-lg transition-all duration-200
+           hover:bg-brand-green-light active:bg-brand-green-dark
+           focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3
+           bg-brand-gold text-brand-green-dark font-body font-semibold
+           rounded-lg transition-all duration-200
+           hover:bg-brand-gold-light active:bg-brand-gold-dark
+           focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-6 py-3
+           border-2 border-brand-green text-brand-green font-body font-semibold
+           rounded-lg transition-all duration-200
+           hover:bg-brand-green hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-surface-border
+           bg-white text-text-primary font-body
+           placeholder:text-text-muted
+           focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-brand-green
+           transition-all duration-200;
+  }
+
+  .select-field {
+    @apply w-full px-4 py-3 rounded-lg border border-surface-border
+           bg-white text-text-primary font-body
+           focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-brand-green
+           transition-all duration-200 appearance-none;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full
+           text-xs font-semibold font-body;
+  }
+
+  .badge-green {
+    @apply badge bg-brand-green/10 text-brand-green;
+  }
+
+  .badge-gold {
+    @apply badge bg-brand-gold/10 text-brand-gold-dark;
+  }
+
+  .prose-content {
+    @apply text-text-secondary leading-relaxed;
+  }
+
+  .prose-content h2 {
+    @apply text-2xl md:text-3xl text-text-primary mt-10 mb-4;
+  }
+
+  .prose-content h3 {
+    @apply text-xl md:text-2xl text-text-primary mt-8 mb-3;
+  }
+
+  .prose-content p {
+    @apply mb-4;
+  }
+
+  .prose-content ul, .prose-content ol {
+    @apply mb-4 pl-6;
+  }
+
+  .prose-content ul {
+    @apply list-disc;
+  }
+
+  .prose-content ol {
+    @apply list-decimal;
+  }
+
+  .prose-content li {
+    @apply mb-2;
+  }
+
+  .prose-content strong {
+    @apply text-text-primary font-semibold;
+  }
+}
