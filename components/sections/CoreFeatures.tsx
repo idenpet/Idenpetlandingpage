@@ -5,9 +5,12 @@ export default function CoreFeatures() {
   const coreFeatures = features.filter((f) => !f.comingSoon);
 
   return (
-    <section className="section-padding bg-brand-cream">
+    <section className="section-padding bg-white">
       <div className="container-page">
-        <div className="text-center mb-12">
+        <div className="text-center mb-14">
+          <div className="section-label bg-brand-gold/10 text-brand-gold-dark mx-auto">
+            Core Features
+          </div>
           <h2 className="text-text-primary">Everything Your Pet Needs</h2>
           <p className="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
             From instant QR recovery to organized travel documents — Idenpet

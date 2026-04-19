@@ -26,24 +26,27 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-white">
+    <section id="how-it-works" className="section-padding bg-brand-cream">
       <div className="container-page">
-        <div className="text-center mb-12">
+        <div className="text-center mb-14">
+          <div className="section-label bg-brand-green/10 text-brand-green mx-auto">
+            <span>3 Simple Steps</span>
+          </div>
           <h2 className="text-text-primary">How It Works</h2>
           <p className="mt-4 text-lg text-text-secondary max-w-xl mx-auto">
             Set up your pet&apos;s digital passport in three simple steps.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {steps.map((step) => (
-            <div key={step.number} className="text-center">
-              <div className="relative mx-auto w-20 h-20 rounded-2xl bg-brand-green/10 flex items-center justify-center mb-6">
+            <div key={step.number} className="card-premium p-8 text-center group">
+              <div className="relative mx-auto w-20 h-20 rounded-2xl bg-brand-green/10 flex items-center justify-center mb-6 group-hover:bg-brand-green/15 transition-colors">
                 <step.icon className="w-8 h-8 text-brand-green" />
-                <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-gold text-brand-green-dark text-sm font-bold flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-brand-gold text-brand-green-dark text-sm font-bold flex items-center justify-center shadow-soft">
                   {step.number}
                 </span>
               </div>
-              <h3 className="text-xl font-body font-bold text-text-primary mb-2">
+              <h3 className="text-xl font-body font-bold text-text-primary mb-3">
                 {step.title}
               </h3>
               <p className="text-text-secondary leading-relaxed">

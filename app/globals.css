@@ -37,40 +37,49 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
+  }
+
+  .section-padding-sm {
+    @apply py-12 md:py-16;
   }
 
   .card {
-    @apply bg-white rounded-card shadow-card border border-surface-border
-           transition-shadow duration-300 hover:shadow-card-hover;
+    @apply bg-white rounded-2xl shadow-card border border-surface-border
+           transition-all duration-300 hover:shadow-card-hover;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-premium border border-surface-border
+           transition-all duration-300 hover:shadow-premium-hover hover:-translate-y-1;
   }
 
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3
            bg-brand-green text-white font-body font-semibold
-           rounded-lg transition-all duration-200
-           hover:bg-brand-green-light active:bg-brand-green-dark
+           rounded-xl transition-all duration-200
+           hover:bg-brand-green-light hover:shadow-glow active:bg-brand-green-dark
            focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center px-6 py-3
            bg-brand-gold text-brand-green-dark font-body font-semibold
-           rounded-lg transition-all duration-200
-           hover:bg-brand-gold-light active:bg-brand-gold-dark
+           rounded-xl transition-all duration-200
+           hover:bg-brand-gold-light hover:shadow-glow-gold active:bg-brand-gold-dark
            focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2;
   }
 
   .btn-outline {
     @apply inline-flex items-center justify-center px-6 py-3
            border-2 border-brand-green text-brand-green font-body font-semibold
-           rounded-lg transition-all duration-200
-           hover:bg-brand-green hover:text-white
+           rounded-xl transition-all duration-200
+           hover:bg-brand-green hover:text-white hover:shadow-glow
            focus:outline-none focus:ring-2 focus:ring-brand-green focus:ring-offset-2;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 rounded-lg border border-surface-border
+    @apply w-full px-4 py-3 rounded-xl border border-surface-border
            bg-white text-text-primary font-body
            placeholder:text-text-muted
            focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-brand-green
@@ -78,7 +87,7 @@
   }
 
   .select-field {
-    @apply w-full px-4 py-3 rounded-lg border border-surface-border
+    @apply w-full px-4 py-3 rounded-xl border border-surface-border
            bg-white text-text-primary font-body
            focus:outline-none focus:ring-2 focus:ring-brand-green focus:border-brand-green
            transition-all duration-200 appearance-none;
@@ -95,6 +104,11 @@
 
   .badge-gold {
     @apply badge bg-brand-gold/10 text-brand-gold-dark;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+           text-sm font-semibold font-body mb-6;
   }
 
   .prose-content {

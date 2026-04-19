@@ -17,8 +17,8 @@ export default function FeatureCard({ feature }: FeatureCardProps) {
   const Icon = iconMap[feature.icon] || QrCode;
 
   return (
-    <div className="card p-6 flex flex-col h-full">
-      <div className="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center mb-4 flex-shrink-0">
+    <div className="card-premium p-7 flex flex-col h-full group">
+      <div className="w-13 h-13 w-[3.25rem] h-[3.25rem] rounded-2xl bg-brand-green/10 flex items-center justify-center mb-5 flex-shrink-0 group-hover:bg-brand-green/15 transition-colors">
         <Icon className="w-6 h-6 text-brand-green" />
       </div>
       <div className="flex items-center gap-2 mb-2">

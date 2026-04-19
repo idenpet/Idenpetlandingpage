@@ -29,23 +29,28 @@ const reasons = [
 
 export default function WhyIdenpet() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-cream">
       <div className="container-page">
-        <div className="text-center mb-12">
-          <h2 className="text-text-primary">Why Idenpet?</h2>
+        <div className="text-center mb-14">
+          <div className="section-label bg-brand-green/10 text-brand-green mx-auto">
+            Why Idenpet?
+          </div>
+          <h2 className="text-text-primary">
+            Modern Tools for Modern Pet Parents
+          </h2>
           <p className="mt-4 text-lg text-text-secondary max-w-xl mx-auto">
             Traditional pet identification and record-keeping wasn&apos;t built
-            for modern pet parents. Idenpet is.
+            for how we live today. Idenpet is.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reasons.map((reason) => (
-            <div key={reason.title} className="flex gap-5">
-              <div className="w-12 h-12 rounded-xl bg-brand-green/10 flex items-center justify-center flex-shrink-0">
-                <reason.icon className="w-6 h-6 text-brand-green" />
+            <div key={reason.title} className="card-premium p-7 flex gap-5 group">
+              <div className="w-14 h-14 rounded-2xl bg-brand-green/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-green/15 transition-colors">
+                <reason.icon className="w-7 h-7 text-brand-green" />
               </div>
               <div>
-                <h3 className="text-lg font-body font-bold text-text-primary mb-1">
+                <h3 className="text-lg font-body font-bold text-text-primary mb-1.5">
                   {reason.title}
                 </h3>
                 <p className="text-text-secondary text-sm leading-relaxed">

@@ -9,15 +9,15 @@ interface QRPreviewCardProps {
 export default function QRPreviewCard({ product }: QRPreviewCardProps) {
   return (
     <div
-      className={`card p-6 flex flex-col h-full ${
-        product.highlighted ? "ring-2 ring-brand-gold" : ""
+      className={`card-premium p-7 flex flex-col h-full ${
+        product.highlighted ? "ring-2 ring-brand-gold shadow-glow-gold" : ""
       }`}
     >
       {product.highlighted && (
-        <span className="badge-gold self-start mb-3 text-xs">Most Popular</span>
+        <span className="badge-gold self-start mb-4 text-xs">Most Popular</span>
       )}
       {product.comingSoon && !product.highlighted && (
-        <span className="badge text-xs bg-surface-muted text-text-muted self-start mb-3">
+        <span className="badge text-xs bg-surface-muted text-text-muted self-start mb-4">
           Coming Soon
         </span>
       )}
@@ -25,16 +25,16 @@ export default function QRPreviewCard({ product }: QRPreviewCardProps) {
       <h3 className="text-xl font-body font-bold text-text-primary mb-1">
         {product.name}
       </h3>
-      <p className="text-2xl font-heading font-bold text-brand-green mb-3">
+      <p className="text-3xl font-heading font-bold text-brand-green mb-3">
         {product.price}
       </p>
-      <p className="text-sm text-text-secondary mb-5 flex-1">
+      <p className="text-sm text-text-secondary mb-6 flex-1">
         {product.description}
       </p>
 
-      <ul className="space-y-2 mb-6">
+      <ul className="space-y-2.5 mb-7">
         {product.features.map((feat) => (
-          <li key={feat} className="flex items-start gap-2 text-sm text-text-secondary">
+          <li key={feat} className="flex items-start gap-2.5 text-sm text-text-secondary">
             <Check className="w-4 h-4 text-brand-green flex-shrink-0 mt-0.5" />
             {feat}
           </li>

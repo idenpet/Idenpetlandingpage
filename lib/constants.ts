@@ -34,6 +34,6 @@ export const FOOTER_LINKS = {
   ],
 };
 
-export const CONTACT_EMAIL = "hello@idenpet.io";
+export const CONTACT_EMAIL = "founder@idenpet.io";
 export const SUPPORT_EMAIL = "support@idenpet.io";
 export const PARTNERSHIP_EMAIL = "partners@idenpet.io";
